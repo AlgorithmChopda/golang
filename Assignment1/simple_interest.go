@@ -17,12 +17,12 @@ func roundFloatTillTwoDecimal(interest float64) float64 {
 
 func calSimpleInterest(principleAmount, rateOfInterest, time float64) float64 {
 	var interest = (principleAmount * rateOfInterest * time) / 100
-	return interest
+	return roundFloatTillTwoDecimal(interest)
 }
 
 func main() {
 	var principleAmount, rateOfInterest, time float64
-	fmt.Println("Enter Principle Amount, Rate Of Interest and Time ")
+	fmt.Println("Enter Principle Amount, Rate Of Interest and Time : ")
 	fmt.Scanln(&principleAmount, &rateOfInterest, &time)
 
 	fmt.Println("Simple Interest : ", calSimpleInterest(principleAmount, rateOfInterest, time))

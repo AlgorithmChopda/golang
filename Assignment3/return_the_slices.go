@@ -34,7 +34,7 @@ import (
 )
 
 func getSlices(startIndex, endIndex int) ([]string, []string, []string) {
-	ar := []string{"qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"}
+	ar := [...]string{"qwe", "wer", "ert", "rty", "tyu", "yui", "uio", "iop"}
 
 	// check for invalid data input
 	if startIndex < 0 || endIndex >= len(ar) || startIndex > endIndex {

@@ -36,22 +36,21 @@ func getHighestFrequencyWords(str string) []string {
 	// Trim to remove \n from end
 	str = strings.Trim(str, "\n")
 
-	var frequency = map[string]int{}
+	var wordFrequency = map[string]int{}
 	tokens := strings.Split(str, " ")
 
 	// count frequency of each word
 	maxFrequency := 0
 	for _, word := range tokens {
-		frequency[word]++
-		maxFrequency = max(maxFrequency, frequency[word])
+		wordFrequency[word]++
+		maxFrequency = max(maxFrequency, wordFrequency[word])
 	}
 
 	var output []string
 
-	for _, word := range tokens {
-		if frequency[word] == maxFrequency {
+	for word, frequency := range wordFrequency {
+		if frequency == maxFrequency {
 			output = append(output, word)
-			frequency[word] = -1
 		}
 	}
 

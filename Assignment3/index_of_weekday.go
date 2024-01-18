@@ -47,5 +47,5 @@ func main() {
 	fmt.Printf("Enter the Integer : ")
 	fmt.Scanln(&index)
 
-	fmt.Println("Output: ", getDayFromIndex(index))
+	fmt.Println("Output:", getDayFromIndex(index))
 }

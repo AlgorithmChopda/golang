@@ -51,13 +51,12 @@ func getSlices(startIndex, endIndex int) ([]string, []string, []string) {
 
 func main() {
 	var startIndex, endIndex int
-
-	fmt.Println("Enter start and end Index :")
+	fmt.Printf("Enter start and end Index :")
 	fmt.Scanln(&startIndex, &endIndex)
 
 	startSlice, middleSlice, endSlice := getSlices(startIndex, endIndex)
 
-	fmt.Println(startSlice)
-	fmt.Println(middleSlice)
-	fmt.Println(endSlice)
+	fmt.Printf("\nStarting : %s", startSlice)
+	fmt.Printf("\nMiddle : %s", middleSlice)
+	fmt.Printf("\nEnding : %s", endSlice)
 }

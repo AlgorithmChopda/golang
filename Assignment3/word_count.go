@@ -47,10 +47,11 @@ func getHighestFrequencyWords(str string) []string {
 	}
 
 	var output []string
-
-	for word, frequency := range wordFrequency {
-		if frequency == maxFrequency {
+	for _, word := range tokens {
+		if wordFrequency[word] == maxFrequency {
 			output = append(output, word)
+			// once word is print ignore further occurences
+			wordFrequency[word] = -1
 		}
 	}
 
@@ -59,11 +60,10 @@ func getHighestFrequencyWords(str string) []string {
 
 func main() {
 	// bufio used to scan new entire line
-	fmt.Println("Enter a Sentence : ")
+	fmt.Printf("Enter a Sentence : ")
 	reader := bufio.NewReader(os.Stdin)
-
 	sentence, _ := reader.ReadString('\n')
 	sentence = strings.Trim(sentence, "\n")
 
-	fmt.Println("Output:", getHighestFrequencyWords(sentence))
+	fmt.Printf("Output: %s", getHighestFrequencyWords(sentence))
 }

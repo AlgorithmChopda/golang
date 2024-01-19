@@ -34,7 +34,6 @@ func getDayFromIndex(index int) string {
 	}
 
 	day, isPresent := weekday_map[index]
-
 	if isPresent {
 		return day
 	}
@@ -47,5 +46,5 @@ func main() {
 	fmt.Printf("Enter the Integer : ")
 	fmt.Scanln(&index)
 
-	fmt.Println("Output:", getDayFromIndex(index))
+	fmt.Printf("Output: %s", getDayFromIndex(index))
 }

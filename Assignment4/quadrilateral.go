@@ -73,7 +73,6 @@ func processChoice(input int) {
 			fmt.Printf("length or breadth cannot be negative")
 			return
 		}
-
 		Print(rect)
 
 	case 2:
@@ -85,7 +84,6 @@ func processChoice(input int) {
 			fmt.Printf("side cannot be negative")
 			return
 		}
-
 		Print(square)
 
 	default:

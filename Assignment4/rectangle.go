@@ -32,7 +32,6 @@ func (rect Rectangle) Area() int {
 	area := rect.length * rect.breadth
 	return area
 }
-
 func (rect Rectangle) Perimeter() int {
 	perimeter := 2 * (rect.length * rect.breadth)
 	return perimeter
@@ -42,7 +41,6 @@ func main() {
 	var r Rectangle
 	fmt.Printf("Enter length and breadth : ")
 	fmt.Scanln(&r.length, &r.breadth)
-
 	if r.breadth < 0 || r.length < 0 {
 		fmt.Printf("length or breadth cannot be negative")
 		return

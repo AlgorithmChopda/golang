@@ -35,25 +35,25 @@ type Quadrilateral interface {
 	Perimeter() int
 }
 
-type Square struct {
+type square struct {
 	side int
 }
 
-func (square Square) Area() int {
+func (square square) Area() int {
 	return square.side * square.side
 }
-func (square Square) Perimeter() int {
+func (square square) Perimeter() int {
 	return square.side * 4
 }
 
-type Rectangle struct {
+type rectangle struct {
 	length, breadth int
 }
 
-func (rect Rectangle) Area() int {
+func (rect rectangle) Area() int {
 	return rect.length * rect.breadth
 }
-func (rect Rectangle) Perimeter() int {
+func (rect rectangle) Perimeter() int {
 	return 2 * (rect.length + rect.breadth)
 }
 
@@ -66,7 +66,7 @@ func processChoice(choice int) {
 	switch choice {
 	case 1:
 		//Rectangle
-		var rect Rectangle
+		var rect rectangle
 		fmt.Printf("Enter length and breadth : ")
 		fmt.Scanln(&rect.length, &rect.breadth)
 		if rect.breadth < 0 || rect.length < 0 {
@@ -77,7 +77,7 @@ func processChoice(choice int) {
 
 	case 2:
 		// Square
-		var square Square
+		var square square
 		fmt.Printf("Enter side of square : ")
 		fmt.Scanln(&square.side)
 		if square.side < 0 {

@@ -24,7 +24,7 @@ package main
 
 import "fmt"
 
-type Student struct {
+type student struct {
 	name string
 	age  int
 }
@@ -38,7 +38,7 @@ func AcceptAnything(value any) {
 		fmt.Printf("This is a value of type String: %#v", value)
 	case bool:
 		fmt.Printf("This is a value of type Boolean: %#v", value)
-	case Student:
+	case student:
 		fmt.Printf("This is a value of type Student: %#v", value)
 	default:
 		fmt.Printf("No such type found")
@@ -57,8 +57,8 @@ func processChoice(choice int) {
 		// boolean
 		AcceptAnything(true)
 	case 4:
-		// type Student
-		var student Student
+		// type student
+		var student student
 		AcceptAnything(student)
 	}
 }

@@ -24,21 +24,21 @@ package main
 
 import "fmt"
 
-type Rectangle struct {
+type rectangle struct {
 	length, breadth int
 }
 
-func (rect Rectangle) Area() int {
+func (rect rectangle) Area() int {
 	area := rect.length * rect.breadth
 	return area
 }
-func (rect Rectangle) Perimeter() int {
+func (rect rectangle) Perimeter() int {
 	perimeter := 2 * (rect.length * rect.breadth)
 	return perimeter
 }
 
 func main() {
-	var rect Rectangle
+	var rect rectangle
 	fmt.Printf("Enter length and breadth : ")
 	fmt.Scanln(&rect.length, &rect.breadth)
 	if rect.breadth < 0 || rect.length < 0 {

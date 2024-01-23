@@ -38,14 +38,14 @@ func (rect Rectangle) Perimeter() int {
 }
 
 func main() {
-	var r Rectangle
+	var rect Rectangle
 	fmt.Printf("Enter length and breadth : ")
-	fmt.Scanln(&r.length, &r.breadth)
-	if r.breadth < 0 || r.length < 0 {
+	fmt.Scanln(&rect.length, &rect.breadth)
+	if rect.breadth < 0 || rect.length < 0 {
 		fmt.Printf("length or breadth cannot be negative")
 		return
 	}
 
-	fmt.Printf("\nArea of Rectangle : %d", r.Area())
-	fmt.Printf("\nPerimeter of Rectangle : %d", r.Perimeter())
+	fmt.Printf("\nArea of Rectangle : %d", rect.Area())
+	fmt.Printf("\nPerimeter of Rectangle : %d", rect.Perimeter())
 }

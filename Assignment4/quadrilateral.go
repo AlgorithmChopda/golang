@@ -62,8 +62,8 @@ func Print(shape Quadrilateral) {
 	fmt.Printf("\nPerimeter: %d", shape.Perimeter())
 }
 
-func processChoice(input int) {
-	switch input {
+func processChoice(choice int) {
+	switch choice {
 	case 1:
 		//Rectangle
 		var rect Rectangle
@@ -78,10 +78,10 @@ func processChoice(input int) {
 	case 2:
 		// Square
 		var square Square
-		fmt.Printf("Enter side of square :")
+		fmt.Printf("Enter side of square : ")
 		fmt.Scanln(&square.side)
 		if square.side < 0 {
-			fmt.Printf("side cannot be negative")
+			fmt.Printf("side cannot be negative.")
 			return
 		}
 		Print(square)

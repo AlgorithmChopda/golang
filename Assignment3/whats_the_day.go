@@ -27,7 +27,7 @@ package main
 import "fmt"
 
 func getDayFromIndex(index int) string {
-	var weekday_map = map[int]string{
+	var weekdayMap = map[int]string{
 		1: "Monday",
 		2: "Tuesday",
 		3: "Wednesday",
@@ -37,7 +37,7 @@ func getDayFromIndex(index int) string {
 		7: "Sunday",
 	}
 
-	day, isPresent := weekday_map[index]
+	day, isPresent := weekdayMap[index]
 	if isPresent {
 		return day
 	}

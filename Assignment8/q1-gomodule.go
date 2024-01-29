@@ -1,3 +1,9 @@
+/*
+	In the below code snippet concurrent goroutines execution corrupts a piece of data by accessing it simultaneously it leads in raise condition.
+	Code snippet output when you run this : 1 is Even
+	Solution snipped output once code is corrected: 0 is Even
+*/
+
 package main
 
 import (
